@@ -1,11 +1,10 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { decrement, increment, amountIn } from "../redux/counterSlice";
+import { amountIn, decrement, increment } from "../../redux/counterSlice";
 
 const Home = () => {
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.counter.value);
-  console.log(counter);
   return (
     <div>
       <button onClick={() => dispatch(increment())}>Increment</button>
